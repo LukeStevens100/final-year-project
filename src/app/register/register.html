@@ -1,0 +1,17 @@
+<div class = "auth-container">
+    <h2>Register</h2>
+       <p>Welcome to "placeholder"!</p>
+       <p>Please enter your details below to register!</p>
+       <!--using Reactive forms to take advantage of angulars built in help-->
+       <form [formGroup]="registerUser">
+        <div>
+            <label>Email:</label>
+            <input type = "email" formControlName = "email" />
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type = "password" formControlName = "password" />
+        </div>
+        <button type = "submit" [disabled] = "registerUser.invalid">Register</button>
+       </form>
+</div>
