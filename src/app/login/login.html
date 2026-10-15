@@ -1,1 +1,18 @@
-<p>Weclome to "placeholder"! Please Log in!</p>
+<div class = "auth-container">
+    <h2>Log In</h2>
+       <p>Welcome to SkiFitter!</p>
+       <p>Please enter your log in details below</p>
+       <!--using Reactive forms to take advantage of angulars built in help-->
+       <form [formGroup]="userDetails">
+        <div>
+            <label>Email:</label>
+            <input type = "email" formControlName = "email" />
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type = "password" formControlName = "password" />
+        </div>
+        <button type = "submit" [disabled] = "userDetails.invalid">Log In</button>
+       </form>
+       <p>If you have never created an account... Register <a href="/register">HERE</a></p>
+</div>
