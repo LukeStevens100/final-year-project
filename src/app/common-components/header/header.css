@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: skyblue;
+    color: white;
+}
+
+.navigation-links a {
+    margin-left: 1.5rem;
+    color: white;
+    transition: color 0.2s;
+}
+
+.navigation-links a:hover {
+    color: red;
+    font-weight: bold;
+}
