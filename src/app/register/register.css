@@ -1,0 +1,21 @@
+.auth-container {
+    text-align: center;
+    padding: 2rem;
+    margin: 2px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registerHeading {
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a:hover {
+    color: red;
+}
