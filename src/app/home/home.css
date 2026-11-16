@@ -1,0 +1,13 @@
+.welcome {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #e3f2fd;
+}
+
+.logo {
+  width: 8rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
