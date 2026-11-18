@@ -10,13 +10,13 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) {}
 
-  // CREATE
+  // Create user
   createUser(userData: any): Observable<any> {
     return this.http.post(this.apiUrl, userData);
   }
 
-  // READ
-  getUser(userId: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${userId}`);
+  // Read users
+  getUser(loginData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/login`, loginData);
   }
 }

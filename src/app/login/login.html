@@ -1,18 +1,17 @@
-<div class = "auth-container">
-    <h2>Log In</h2>
-       <p>Welcome to SkiFitter!</p>
-       <p>Please enter your log in details below</p>
-       <!--using Reactive forms to take advantage of angulars built in help-->
-       <form [formGroup]="userDetails">
-        <div>
-            <label>Email:</label>
-            <input type = "email" formControlName = "email" />
-        </div>
-        <div>
-            <label>Password:</label>
-            <input type = "password" formControlName = "password" />
-        </div>
-        <button type = "submit" [disabled] = "userDetails.invalid">Log In</button>
-       </form>
-       <p>If you have never created an account... Register <a href="/register">HERE</a></p>
+<div class="auth-container">
+    <h2 class="loginHeading">Log In - SkiFitter</h2>
+    <p>Welcome back to SkiFitter!</p>
+    <!--using Reactive forms to take advantage of angulars built in help-->
+    <form [formGroup]="userDetails" (ngSubmit)="onSubmit()" class="login-form">
+        <mat-form-field appearance="outline">
+            <label for="email">Email:</label>
+            <input matInput id="email" type="email" formControlName="email" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <label for="password">Password:</label>
+            <input matInput id="password" type="password" formControlName="password" />
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit" [disabled]="userDetails.invalid">Log In</button>
+    </form>
+    <p>Never created an account?... Register <a href="/register">HERE</a></p>
 </div>
